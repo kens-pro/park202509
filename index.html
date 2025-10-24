@@ -111,6 +111,77 @@
     .testimonial{background:#fff;border:1px solid #eee;border-radius:10px;padding:34px;max-width:680px;margin:0 auto;box-shadow:0 8px 22px rgba(0,0,0,.06)}
     .testimonial-text{font-size:1.05rem;line-height:1.9;color:#555;margin-bottom:14px;font-style:italic}
     .testimonial-author{color:#888;text-align:right}
+    
+    /* ===== Center Map Section (教室案内/追加) ===== */
+    .center-map-section{
+      padding: 70px 0;
+      text-align: center;
+      background: #f0fff0; /* 明るいミントグリーン系の背景 */
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .map-title{
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e7e72; /* 濃いめのグリーン */
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .map-title::after {
+      content: '';
+      display: block;
+      width: 60%;
+      margin: 4px auto 0;
+      height: 3px;
+      background: #1e7e72;
+    }
+    .map-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      max-width: 780px;
+      margin: 40px auto 0;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 20px;
+      text-align: left;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+    .map-visual img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .map-details h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .detail-group {
+      margin-bottom: 16px;
+    }
+    .detail-group strong {
+      display: block;
+      font-weight: 600;
+      color: #5C3D7F;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+    .detail-group a {
+      color: #1e7e72;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .detail-group a:hover {
+      text-decoration: underline;
+    }
+    /* ===== End Center Map Section ===== */
+
 
     /* ===== Final CTA ===== */
     .final-cta{padding:80px 0;text-align:center;background:#fff}
@@ -128,6 +199,15 @@
       .main-title{font-size:2.4rem}
       .gift-wrap{grid-template-columns:1fr;gap:18px}
       .section-title{font-size:1.8rem}
+    }
+    @media (max-width: 680px) {
+      .map-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .map-visual img {
+          aspect-ratio: 16/9; /* スマホでは横長に */
+      }
     }
 
     /* subtle fade-in */
@@ -170,7 +250,6 @@
 
       <div class="gift-hero-visual fade-in">
         <!-- ★サンプル画像：差し替えてください。推奨 1200px以上 -->
-        <!-- 例：今回いただいた合成サンプルを横長でトリミングして2枚のうち1枚を表示 -->
         <span class="ribbon">参加特典</span>
         <img src="image/Generated Image September 17, 2025 - 12_06PM.png" alt="フィギュア風AI画像サンプル">
       </div>
@@ -258,6 +337,48 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== Center Map Section (教室案内/追加) ===== -->
+  <section class="center-map-section">
+    <div class="container">
+      <h2 class="map-title">教室のご案内</h2>
+      <div class="map-card fade-in">
+        <!-- 会場写真 (※「image/center_w.jpg」は仮の画像パスです。適切な画像に差し替えてください。) -->
+        <div class="map-visual">
+          <img src="image/center_w.jpg" alt="ヤマハ音楽教室 大津わにセンター外観">
+        </div>
+
+        <!-- 詳細情報 -->
+        <div class="map-details">
+          <h3>大津わにセンター</h3>
+
+          <div class="detail-group">
+            <strong>所在地</strong>
+            〒520-0523 滋賀県大津市和邇中浜566
+            <div>
+              <!-- Googleマップの実際のURLを記載してください -->
+              <a href="https://maps.app.goo.gl/xxxxx" target="_blank" onclick="track('gmap_click_doremi0925')">
+                ▶ Googleマップで見る
+              </a>
+            </div>
+          </div>
+
+          <div class="detail-group">
+            <strong>アクセス</strong>
+            JR湖西線 和邇駅前より徒歩1分<br>
+            駐車場: あり
+          </div>
+
+          <div class="detail-group">
+            <strong>電話番号</strong>
+            0740-22-2063
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== End Center Map Section ===== -->
+
 
   <!-- ===== Final CTA ===== -->
   <section class="final-cta">
